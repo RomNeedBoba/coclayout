@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'Supercell';
+    src: url('fonts/Supercell-magic-webfont.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the navbar span the full width of the viewport */
+    z-index: 999;
+    padding: 15px 0; /* Adjust padding as needed */
+    font-family: 'Supercell', sans-serif; /* Apply the Supercell font */
+    transition: all 0.3s ease;
+    background-color: brown; /* Change background color to brown */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional box shadow for visual separation */
+}
+
+.navbar.sticky {
+    padding: 15px 0; /* Adjust sticky state padding if needed */
+    background-color: crimson; /* Change background color when sticky */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional box shadow for visual separation */
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensure the content within .max-width spans the full width */
+    margin: 0 auto; /* Center align the content */
+    max-width: 1200px; /* Adjust max-width of content as needed */
+    padding: 0 20px; /* Add padding to the content area */
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+/* .navbar .logo a span {
+    color: crimson;
+    transition: all 0.3s ease;
+} */
+
+.navbar .menu {
+    margin-right: -15px; /* Remove default margin */
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: crimson;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+}
+.showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 20px; /* Adjust gap between items */
+    margin: 20px; /* Adjust margin around the container */
+}
+
+.showcase-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    display: flex;
+    gap: 10px; /* Adjust gap between images */
+}
+
+.image-container a {
+    flex: 1; /* Each image takes half of the container width */
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.item-description {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.item-description h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.item-description p {
+    background-color: #6a0dad;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.buy-btn {
+    align-self: flex-end;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Lightbox Close Button (if applicable) */
+.lb-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .showcase-container {
+        grid-template-columns: 1fr; /* One item per row on smaller screens */
+    }
+}
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+@media (max-width: 992px) {
+    .showcase-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
+    }
+}
+
+@media (max-width: 576px) {
+    .showcase-container {
+        grid-template-columns: 1fr; /* 1 column per row */
+    }
+}

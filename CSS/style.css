@@ -1,0 +1,853 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@font-face {
+    font-family: 'Supercell';
+    src: url('fonts/Supercell-magic-webfont.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.about, .services, .skills, .teams, .contact, footer{
+    font-family: 'Supercell', sans-serif; /* Apply the Supercell font */
+}
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Supercell', sans-serif; /* Apply the Supercell font */
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Supercell', sans-serif; /* Apply the Supercell font */
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #bbd819;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #bbd819;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+/* home section styling */
+.home{
+    display: flex;
+    background: url("https://i.pinimg.com/originals/96/e3/45/96e345dce5aac92617c38bbe13240299.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Supercell', sans-serif; /* Apply the Supercell font */
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+
+.homea{
+    background-color: white; 
+    display: flex;
+    background: url("https://mcdn.wallpapersafari.com/medium/45/47/ploL3j.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.homea .max-width {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Align content to the left side */
+    padding-left: 30%; /* Increase padding to the left */
+}
+
+.homea .max-width .row {
+    margin-left: 0; /* Ensure the row starts from the left */
+}
+
+.homea .home-content {
+    text-align: left;
+    margin-left: 80px;
+    background-color: white;
+    padding: 70px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Supercell', sans-serif; /* Apply the Supercell font */
+}
+
+.homea .home-content .text-1 {
+    color: #111;
+    font-size: 27px;
+}
+
+.homea .home-content .text-2 {
+    color: midnightblue;
+    font-size: 75px;
+    font-weight: 600;
+    margin-right: -6px; /* Adjust margin for left alignment */
+}
+
+.homea .home-content .text-3 {
+    color: #111;
+    font-size: 70px;
+    margin: 5px 0;
+    font: message-box;
+    font-family: 'Supercell', sans-serif; /* Apply the Supercell font to the button */
+}
+
+.homea .home-content .text-3 span {
+    color: crimson;
+    font-weight: 500;
+    font-family: 'Supercell', sans-serif; /* Apply the Supercell font to the button */
+}
+
+.homea .home-content a {
+    display: inline-block;
+    background-color: brown;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+    font-family: 'Supercell', sans-serif; /* Apply the Supercell font */
+}
+
+.homea .home-content a:hover {
+    color: crimson;
+    background: none;
+}
+
+/* footer section styling */
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+  .image-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .image-box {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    color: #fff;
+    font-family: 'Supercell', sans-serif; /* Apply the Supercell font */
+    font-size: 16px;
+    width: 20%;
+  }
+  
+  .image-box label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .image-box textarea {
+    background-color: #444;
+    color: #fff;
+    font-family: 'Supercell', sans-serif; /* Apply the Supercell font */
+    font-size: 16px;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    overflow: auto;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+  
+  .grid-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .box-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .description {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    width: 100px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #e60000;
+    color: #fff;
+}
+
+  .product h3 {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+
+
+  .kirom {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  .kirom-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+
+
+  body {
+    font-family: 'Supercell', sans-serif; /* Apply the Supercell font */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-item {
+    flex: 1 1 300px;
+    margin: 10px;
+    max-width: 300px;
+}
+
+.box {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.box .image {
+    width: 100%;
+    height: 200px; /* Adjust this height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.box h2 {
+    font-size: 24px;
+    margin: 20px 0;
+    /* color: #333; */
+}
+
+.box .btn {
+    display: inline-block;
+    width: 100px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: crimson;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.box .btn:hover {
+    background-color: #e60000;
+}
+
+
+/* responsive media query start */
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+
+
+
+.products{
+    width: 100%;
+    height: 140vh;
+    padding: 25px 0;
+}
+
+.products h1{
+    margin: 35px 0;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #c72092,#6c14d0);
+    /* -webkit-background-clip: text; */
+    -webkit-text-fill-color: transparent;    
+}
+
+.products .box{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px 0;
+}
+
+.products .box .card{
+    width: 290px;
+    height: 440px;
+    box-shadow: 0 0 8px #6c14d0;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+    background: #f6f6f6;
+}
+
+.products .box .card .small_card{
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    margin: 10px 0;
+    transform: translateX(-20px);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.products .box .card:hover .small_card{
+    transform: translateX(2px);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.products .box .card .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products .box .card .image img{
+    width: 150px;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.products .box .card:hover .image img{
+    transform: scale(1.1);
+}
+
+.products .box .card .small_card i{
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 2px 0;
+    line-height: 40px;
+    border: 2px solid #999999;
+    transition: 0.2s;
+}
+
+.products .box .card .small_card i:hover{
+    color: #c72092;
+}
+
+.products .box .card .products_text h2{
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.products .box .card .products_text p{
+    color: #91919191;
+    line-height: 21px;
+    margin: 8px 0;
+}
+
+.products .box .card .products_text h3{
+    margin: 7px 0;
+}
+
+.products .box .card .products_text .products_star{
+    color: orange;
+    margin-bottom: 19px;
+    cursor: pointer;
+}
+
+.products .box .card .products_text .btn{
+    text-decoration: none;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #c72092 , #6c14d0);
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+/* General styling for the grid items */
+.grid-item {
+    margin: 20px;
+    text-align: center;
+}
+
+.box {
+    padding: 20px;
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    /* background: #f0f0f0; */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    /* color: #333; */
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #ddd;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .grid-item {
+        width: 100%;
+        max-width: 400px;
+        margin: 10px 0;
+    }
+
+    .home .max-width {
+        padding-left: 0; /* Reset padding for smaller screens */
+        justify-content: center; /* Center content horizontally */
+        text-align: center; /* Center text within .home-content */
+    }
+
+    .home .home-content {
+        margin-left: 0; /* Reset margin for smaller screens */
+        padding: 40px; /* Adjust padding for smaller screens */
+    }
+
+    .home .home-content .text-1 {
+        font-size: 22px; /* Adjust font size for smaller screens */
+    }
+
+    .home .home-content .text-2 {
+        font-size: 48px; /* Adjust font size for smaller screens */
+    }
+
+    .home .home-content .text-3 {
+        font-size: 15px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2 {
+        font-size: 50px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 27px;
+    }
+
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 19px;
+    }
+
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+
+    .right form .error-box {
+       width: 150px;
+    }
+
+    .scroll-up-btn {
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+}
